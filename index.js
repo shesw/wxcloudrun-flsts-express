@@ -37,7 +37,7 @@ app.get("/obj/*", async (req, res) => {
 });
 
 app.get("/bonus/new_task", async (req, res) => {
-  res.send(bonus.newTask())
+  res.send(bonus.newTask(null).toString())
 })
 
 // // 小程序调用，获取微信 Open ID

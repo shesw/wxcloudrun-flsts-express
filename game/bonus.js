@@ -2,7 +2,7 @@ var a = 0
 
 module.exports = {
     newTask(req) {
-        console.log(req.data)
+        console.log(JSON.stringify(req))
         return ++a
     }
 }

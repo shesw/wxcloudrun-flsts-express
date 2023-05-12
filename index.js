@@ -9,6 +9,7 @@ const express = require("express");
 
 // const logger = morgan("tiny");
 const utils = require("./utils");
+const bonus = require("./game/bonus");
 
 const app = express();
 // app.use(express.urlencoded({
@@ -34,6 +35,10 @@ app.get("/obj/*", async (req, res) => {
   }
   utils.listObj(prefix, onError, onSuccess)
 });
+
+app.get("/bonus/new_task", async (req, res) => {
+  res.send(bonus.newTask())
+})
 
 // // 小程序调用，获取微信 Open ID
 // app.get("/api/wx_openid", async (req, res) => {

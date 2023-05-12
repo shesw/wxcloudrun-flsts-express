@@ -1,11 +1,15 @@
-var a = 0
+var totalCost = 0
+var bonusRate = 0
+var perChip = 0
+var playerCount = 0
 
 module.exports = {
     newTask(req) {
-        console.log(JSON.stringify(req.body))
         console.log(JSON.stringify(req.params))
-        console.log(JSON.stringify(req.query))
-        console.log(JSON.stringify(req.headers))
-        return ++a
+        totalCost = req.params.totalCost
+        bonusRate = req.params.bonusRate
+        perChip = req.params.perChip
+        playerCount = req.params.playerCount
+        return "totalCost=" + totalCost + ", bonusRate=" + bonusRate + ", perChip=" + perChip + ", playerCount=" + playerCount
     }
 }

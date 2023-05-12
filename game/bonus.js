@@ -1,8 +1,8 @@
 var a = 0
 
 module.exports = {
-    newTask(params) {
-        console.log(params)
+    newTask(req) {
+        console.log(req.data)
         return ++a
     }
 }

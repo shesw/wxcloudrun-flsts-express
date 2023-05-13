@@ -5,7 +5,9 @@ var playerCount = 0
 
 module.exports = {
     newTask(req) {
-        console.log(JSON.stringify(req.params))
+        console.log("params: " + JSON.stringify(req.params))
+        console.log("body: " + JSON.stringify(req.body))
+        console.log("query: " + JSON.stringify(req.query))
         totalCost = req.params.totalCost
         bonusRate = req.params.bonusRate
         perChip = req.params.perChip

@@ -8,10 +8,10 @@ module.exports = {
         console.log("params: " + JSON.stringify(req.params))
         console.log("body: " + JSON.stringify(req.body))
         console.log("query: " + JSON.stringify(req.query))
-        totalCost = req.params.totalCost
-        bonusRate = req.params.bonusRate
-        perChip = req.params.perChip
-        playerCount = req.params.playerCount
+        totalCost = req.query.totalCost
+        bonusRate = req.query.bonusRate
+        perChip = req.query.perChip
+        playerCount = req.query.playerCount
         return "totalCost=" + totalCost + ", bonusRate=" + bonusRate + ", perChip=" + perChip + ", playerCount=" + playerCount
     }
 }

@@ -40,6 +40,10 @@ app.get("/bonus/new_task", async (req, res) => {
   res.send(bonus.newTask(req).toString())
 })
 
+app.get("/bonus/query", async (req, res) => {
+  res.send(bonus.query(req).toString())
+})
+
 // // 小程序调用，获取微信 Open ID
 // app.get("/api/wx_openid", async (req, res) => {
 //   if (req.headers["x-wx-source"]) {

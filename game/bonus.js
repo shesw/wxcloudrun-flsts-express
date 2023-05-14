@@ -15,7 +15,7 @@ function calculate(rc, pay) {
 
     var res1 = totalAverage - winBonus
 
-    return "每位玩家平均账单为" + totalAverage.toFixed(2) + "元，你为自己赢得的彩头钱为" + winBonus.toFixed(2) + "元，除去已支付金额，你还需支付" + (res1 - pay).toFixed(2) + "元"
+    return "每位玩家平均账单为" + totalAverage.toFixed(2) + "元，\n你为自己赢得的彩头钱为" + winBonus.toFixed(2) + "元，\n除去已支付金额，你还需支付" + (res1 - pay).toFixed(2) + "元"
 
 }
 
@@ -31,6 +31,6 @@ module.exports = {
     query(req) {
         var remainChip = req.query.remainChip ? req.query.remainChip : 0
         var pay = req.query.pay ? req.query.pay : 0
-        return "本次活动的总支出为" + totalCost + "元, \n其中有" + bonusRate + "%作为游戏彩头。\n玩家每人分到的平均筹码数为" + perChip + ", \n玩家总数为：" + playerCount + "\n你的剩余筹码为：" + remainChip + ", \n已支付的金额为：" + pay + ",\n因此: " + calculate(remainChip, pay)
+        return "本次活动的总支出为" + totalCost + "元, \n其中有" + bonusRate + "%作为游戏彩头。\n玩家每人分到的平均筹码数为" + perChip + ", \n玩家总数为：" + playerCount + "\n你的剩余筹码为：" + remainChip + ", \n已支付的金额为：" + pay + ",\n因此: \n" + calculate(remainChip, pay)
     }
 }
